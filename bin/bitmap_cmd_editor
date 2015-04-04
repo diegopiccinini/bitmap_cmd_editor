@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+
+begin
+  require 'bitmap_cmd_editor'
+  Client.get_commands
+rescue LoadError => e
+  abort 'Could not load "bitmap_cmd_editor"'
+end
