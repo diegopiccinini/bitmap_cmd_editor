@@ -1,5 +1,5 @@
 
-module Bitmapcmdeditor
+module BitmapCmdEditor
   # @author Diego Hernán Piccinini Lagos
   # This class handle the the interactive loop until X + Enter to exit
 	class Client

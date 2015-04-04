@@ -12,3 +12,4 @@ cd c/.bundle/
 *.o
 *.a
 mkmf.log
+*.gem
