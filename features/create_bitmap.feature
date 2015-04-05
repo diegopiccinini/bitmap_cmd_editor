@@ -29,3 +29,18 @@ Feature: Create a Bitmap
     Given a bitmap created
 		When The user attempts to create "I 7 -6"
 		Then He should see the message "the minimun rows allowed is 1 and you want -6"
+
+  Scenario: Creating an image with more arguments than allowed
+    Given a bitmap created
+		When The user attempts to create "I 7 8 10"
+		Then He should see the message "the command I require 2 arguments M N"
+
+  Scenario: Creating an image with less arguments than allowed
+    Given a bitmap created
+		When The user attempts to create "I 7"
+		Then He should see the message "the command I require 2 arguments M N"
+
+  Scenario: Creating an image with wrong type arguments
+    Given a bitmap created
+		When The user attempts to create "I S 3"
+		Then He should see the message "the arguments M N should be integers"

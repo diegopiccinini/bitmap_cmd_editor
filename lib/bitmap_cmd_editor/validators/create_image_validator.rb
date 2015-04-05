@@ -7,6 +7,7 @@ module BitmapCmdEditor
 				# @param args [Array] the command 0=> 'I' and 1=> columns 2 =>rows
 				def validate(args)
 					begin
+						raise args
 						columns= Integer(args[1])
 						rows= Integer(args[2])
 						raise MoreColumnsThanAllowed.new(ErrorMessage.new(
