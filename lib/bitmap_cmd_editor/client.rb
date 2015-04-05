@@ -1,7 +1,9 @@
+require 'readline'
 
 module BitmapCmdEditor
   # @author Diego Hernán Piccinini Lagos
   # This class handle the the interactive loop until X + Enter to exit
+
 	class Client
 		class << self
 			def get_commands
@@ -10,7 +12,7 @@ module BitmapCmdEditor
 Welcome to the Bitmap Command Editor
 ------------------------------------
 
-Commands available:
+Available Commands:
 -------------------
 
 	I M N - Create a new M x N image with all pixels coloured white (O).
@@ -25,19 +27,20 @@ EOF
 					puts output_message
 
 					loop do
-						STDOUT.flush
-						input = gets.chomp
-						if input=="X"
+						input = Readline.readline("> ")
+						input.strip!
+
+						# the command X must not be processed it's only to exit
+						if input=='X'
 							puts "\nEnd the Session..."
 							break
 						else
-							raise ArgumentError
-							break
+							Validators::CommandValidator.new(input)
 						end
 					end
 
-				rescue
-					raise ScriptError
+				rescue => err
+					puts err.message
 				end
 			end
 		end

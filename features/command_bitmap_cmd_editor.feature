@@ -7,7 +7,7 @@ Scenario: Welcome Message and Exit
 			Welcome to the Bitmap Command Editor
 			------------------------------------
 
-			Commands available:
+			Available Commands:
 			-------------------
 
 				I M N - Create a new M x N image with all pixels coloured white (O).
@@ -24,12 +24,13 @@ Scenario: Welcome Message and Exit
 Scenario: Welcome Message and not Exit
 	When I run `bitmap_cmd_editor` interactively
 	And I type "Y"
-	Then it should fail with:
+	And I type "X"
+	Then it should pass with:
 			"""
 			Welcome to the Bitmap Command Editor
 			------------------------------------
 
-			Commands available:
+			Available Commands:
 			-------------------
 
 				I M N - Create a new M x N image with all pixels coloured white (O).
@@ -40,4 +41,8 @@ Scenario: Welcome Message and not Exit
 				F X Y C - Fill the region R with the colour C. R is defined as: Pixel (X,Y) belongs to R. Any other pixel which is the same colour as (X,Y) and shares a common side with any pixel in R also belongs to this region.
 				S - Show the contents of the current image
 				X - Terminate the session
+
+			This command is not available, please check the available commands
+
+			End the Session...
 			"""
