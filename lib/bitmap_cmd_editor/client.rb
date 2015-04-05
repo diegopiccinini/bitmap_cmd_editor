@@ -37,8 +37,8 @@ EOF
 							puts "\nEnd the Session..."
 							break
 						else
-							bitmap.process_command(input)
-
+								process=bitmap.process_command(input)
+								puts process unless process==:valid
 						end
 					end
 

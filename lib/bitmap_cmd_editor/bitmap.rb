@@ -6,24 +6,29 @@ module BitmapCmdEditor
 		attr_reader :table
 		def process_command(input)
 
-			if Validators::CommandValidator.validate(input)==:valid
-
+			validator=Validators::CommandValidator.validate(input)
+			if validator == :valid
 				args = input.split(' ')
 				case args[0]
 				when 'I'
 					create_image(args)
 				end
+			else
+				validator
 			end
 		end
 		def to_s
 			input
 		end
 		def create_image(args)
-			##TODO if Validators::CreateImageValidator(args)==:valid
-			@columns=Integer(args[1])
-			@rows = Integer(args[2])
-			@table = Array.new(@rows,Array.new(@columns,'O'))
-			#TODOend
+			validator=Validators::CreateImageValidator.validate(args)
+			if validator == :valid
+				@columns=Integer(args[1])
+				@rows = Integer(args[2])
+				@table = Array.new(@rows,Array.new(@columns,'O'))
+			else
+				validator
+			end
 		end
 	end
 end

@@ -8,10 +8,10 @@ module BitmapCmdEditor
 				def validate(input)
 					begin
 						args=input.split(' ')
-						raise NotImplementedCommand unless BitmapCmdEditor::COMMANDS.include?(args[0])
+						raise NotImplementedCommand.new(ErrorMessage.new(:command_not_exist).show_content) unless BitmapCmdEditor::COMMANDS.include?(args[0])
 						:valid
-					rescue NotImplementedCommand => nic
-						ErrorMessage.new(:command_not_exist)
+					rescue NotImplementedCommand => err
+						err.message
 					end
 				end
 			end

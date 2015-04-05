@@ -5,7 +5,8 @@ module BitmapCmdEditor
 		class ErrorMessage
 			MESSAGES = {
 				:command_not_exist => "This command is not available, please check the available commands",
-
+				:more_than_max => "the maximun %{obj} allowed are %{max} and you want %{quantity}",
+				:less_than_min => "the minimun %{obj} allowed is %{max} and you want %{quantity}"
 			}
 			# initialize the message
 			# @param content [String] text message to the user
@@ -19,11 +20,10 @@ module BitmapCmdEditor
 				end
 				@error_type = error_type
 				@args = args
-				show_content
 			end
 			# @return text message [String] it could contain arguments
 			def show_content
-				puts "\n" + @content % @args
+				"\n" + @content % @args
 			end
 		end
 	end
