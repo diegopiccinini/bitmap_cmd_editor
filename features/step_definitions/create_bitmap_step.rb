@@ -1,12 +1,12 @@
 Given(/^a bitmap created$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @bitmap = Bitmap.new
 end
 
-When(/^The user type "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^The user type "([^"]*)"$/) do |command|
+  @bitmap.process_command(command)
 end
 
 Then(/^this bitmap should be created$/) do |table|
-  # table is a Cucumber::Core::Ast::DataTable
-  @bitmap_image = table.raw
+	expected_table=table.raw
+  expect(@bitmap.table).to match_array(expected_table)
 end
