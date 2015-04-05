@@ -26,6 +26,8 @@ Available Commands:
 EOF
 					puts output_message
 
+
+					bitmap = Bitmap.new
 					loop do
 						input = Readline.readline("> ")
 						input.strip!
@@ -35,7 +37,8 @@ EOF
 							puts "\nEnd the Session..."
 							break
 						else
-							Validators::CommandValidator.new(input)
+							bitmap.process_command(input)
+
 						end
 					end
 
