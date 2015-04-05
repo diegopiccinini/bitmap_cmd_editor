@@ -7,7 +7,9 @@ module BitmapCmdEditor
 
 			def initialize(input)
 				begin
-					raise NotImplementedCommand unless BitmapCmdEditor::COMMANDS.include?(input[0])
+					args=input.split(' ')
+					raise NotImplementedCommand unless BitmapCmdEditor::COMMANDS.include?(args[0])
+
 				rescue NotImplementedCommand => nic
 					ErrorMessage.new(:command_not_exist)
 				end
