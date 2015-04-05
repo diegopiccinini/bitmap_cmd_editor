@@ -7,9 +7,14 @@ module BitmapCmdEditor
 				# @param args [Array] the command 0=> 'I' and 1=> columns 2 =>rows
 				def validate(args)
 					begin
-						raise args
-						columns= Integer(args[1])
-						rows= Integer(args[2])
+						raise CreateImageArgumentError.new(
+							ErrorMessage.new(:create_image_wrong_arguments).show_content) unless args.count == 3
+						begin
+							columns= Integer(args[1])
+							rows= Integer(args[2])
+						rescue => err
+							raise TypeError.new("the arguments M N should be integers")
+						end
 						raise MoreColumnsThanAllowed.new(ErrorMessage.new(
 							:more_than_max,
 							{:obj=>'columns' , :max => BitmapCmdEditor::MAX_COLUMNS,:quantity => columns }

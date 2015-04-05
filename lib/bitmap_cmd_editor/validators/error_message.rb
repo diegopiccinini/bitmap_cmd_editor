@@ -6,7 +6,8 @@ module BitmapCmdEditor
 			MESSAGES = {
 				:command_not_exist => "This command is not available, please check the available commands",
 				:more_than_max => "the maximun %{obj} allowed are %{max} and you want %{quantity}",
-				:less_than_min => "the minimun %{obj} allowed is %{max} and you want %{quantity}"
+				:less_than_min => "the minimun %{obj} allowed is %{max} and you want %{quantity}",
+				:create_image_wrong_arguments => "the command I require 2 arguments"
 			}
 			# initialize the message
 			# @param content [String] text message to the user
