@@ -83,6 +83,10 @@ module BitmapCmdEditor
 				end
 				table
 			end
+
+			# to draw a vertical line
+			# @param input [String] in this case the command is for example V 2 1 4 W
+			# @return VerticalLineValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def draw_vertical_line(args)
 				validator=Validators::VerticalLineValidator.validate(args, @columns, @rows)
 				if validator == :valid

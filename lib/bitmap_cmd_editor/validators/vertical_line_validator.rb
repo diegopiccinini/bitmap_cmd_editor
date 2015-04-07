@@ -4,6 +4,8 @@ module BitmapCmdEditor
 		class VerticalLineValidator
 			class << self
 				# @param args [Array] the command 0=> 'V' and 1=> column 2 => row start 3 => row end 4 => colour
+				# @param bitmap_columns [Integer] number of columns of the image created
+				# @param bitmap_rows [Integer] number of rows of the image created
 				def validate(args, bitmap_columns, bitmap_rows)
 					begin
 						raise ColourPixelArgumentError.new(

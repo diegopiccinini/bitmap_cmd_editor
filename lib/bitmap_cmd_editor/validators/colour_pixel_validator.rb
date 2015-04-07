@@ -4,6 +4,8 @@ module BitmapCmdEditor
 		class ColourPixelValidator
 			class << self
 				# @param args [Array] the command 0=> 'L' and 1=> columns 2 =>rows 3 => colour
+				# @param bitmap_columns [Integer] number of columns of the image created
+				# @param bitmap_rows [Integer] number of rows of the image created
 				def validate(args, bitmap_columns, bitmap_rows)
 					begin
 						raise ColourPixelArgumentError.new(
