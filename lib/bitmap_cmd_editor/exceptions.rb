@@ -6,4 +6,5 @@ module BitmapCmdEditor
   class MoreRowsThanAllowed < RangeError; end
   class LessColumnsThanAllowed < RangeError; end
   class LessRowsThanAllowed < RangeError; end
+  class ClearImageArgumentError < ArgumentError; end
 end

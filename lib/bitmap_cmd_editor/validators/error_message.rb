@@ -4,10 +4,12 @@ module BitmapCmdEditor
 		# An intance contains te error_type and a message to the user
 		class ErrorMessage
 			MESSAGES = {
+				:invalid => "This operation is invalid",
 				:command_not_exist => "This command is not available, please check the available commands",
 				:more_than_max => "the maximun %{obj} allowed are %{max} and you want %{quantity}",
 				:less_than_min => "the minimun %{obj} allowed is %{max} and you want %{quantity}",
-				:create_image_wrong_arguments => "the command I require 2 arguments"
+				:create_image_wrong_arguments => "the command I require 2 arguments",
+				:clear_image_wrongs_arguments => "clear image hasn't arguments"
 			}
 			# initialize the message
 			# @param content [String] text message to the user
