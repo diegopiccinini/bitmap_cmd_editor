@@ -5,6 +5,6 @@ Given(/^a bitmap was created typing the command "([^"]*)"$/) do |command|
   }
 end
 
-When(/^The user tries to colour "([^"]*)"$/) do |arg1|
+When(/^The user tries to colour "([^"]*)"$/) do |command|
   @command = @bitmap.process_command(command)
 end

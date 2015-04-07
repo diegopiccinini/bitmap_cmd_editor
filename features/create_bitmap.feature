@@ -23,7 +23,7 @@ Feature: Create a Bitmap
 		| "I 0 6"		| "the minimun columns allowed is 1 and you want 0"				|
 		| "I 7 -6"	| "the minimun rows allowed is 1 and you want -6"					|
 		| "I 500 6" | "the maximun columns allowed are 250 and you want 500"	|
-		| "I 7 8 10"| "the command I require 2 arguments"											|
-		| "I 7"			| "the command I require 2 arguments"											|
+		| "I 7 8 10"| "this command require 2 arguments"											|
+		| "I 7"			| "this command require 2 arguments"											|
 		| "I S 3"		| "the coordinates M N must be integers"									|
 		| "I 2 H"		| "the coordinates M N must be integers"									|

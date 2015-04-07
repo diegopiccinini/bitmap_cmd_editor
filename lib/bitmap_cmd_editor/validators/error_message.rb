@@ -7,11 +7,13 @@ module BitmapCmdEditor
 				:invalid => "This operation is invalid",
 				:command_not_exist => "This command is not available, please check the available commands",
 				:more_than_max => "the maximun %{obj} allowed are %{max} and you want %{quantity}",
-				:less_than_min => "the minimun %{obj} allowed is %{max} and you want %{quantity}",
-				:command_wrong_arguments => "the command I require %{arguments} arguments",
+				:less_than_min => "the minimun %{obj} allowed is %{min} and you want %{quantity}",
+				:command_wrong_arguments => "this command require %{arguments} arguments",
 				:clear_image_wrongs_arguments => "clear image hasn't arguments",
 				:colours_pixel_out_of_range => "a valid %{obj} values are between %{min} and %{max}, and you try %{quantity}",
-				:coordinates_are_not_integer => "the coordinates M N must be integers"
+				:coordinates_are_not_integer => "the coordinates M N must be integers",
+				:out_of_range => "a valid %{obj} values are between %{min} and %{max}, and you try %{quantity}",
+				:the_colour_is_invalid => "the colour must be a Capital Letter A-Z"
 			}
 			# initialize the message
 			# @param content [String] text message to the user

@@ -15,22 +15,14 @@ module BitmapCmdEditor
 						rescue => err
 							raise TypeError.new(ErrorMessage.new(:coordinates_are_not_integer).show_content)
 						end
-						raise MoreColumnsThanAllowed.new(ErrorMessage.new(
-							:more_than_max,
-							{:obj=>'columns' , :max => BitmapCmdEditor::MAX_COLUMNS,:quantity => columns }
-							).show_content) if columns > BitmapCmdEditor::MAX_COLUMNS
-						raise MoreRowsThanAllowed.new(ErrorMessage.new(
-							:more_than_max,
-							{:obj=>'rows' , :max => BitmapCmdEditor::MAX_ROWS,:quantity => rows }
-							).show_content) if rows > BitmapCmdEditor::MAX_ROWS
-						raise LessColumnsThanAllowed.new(ErrorMessage.new(
-							:less_than_min,
-							{:obj=>'columns' , :max => BitmapCmdEditor::MIN_COLUMNS,:quantity => columns }
-							).show_content) if columns < BitmapCmdEditor::MIN_COLUMNS
-						raise LessRowsThanAllowed.new(ErrorMessage.new(
-							:less_than_min,
-							{:obj=>'rows' , :max => BitmapCmdEditor::MIN_ROWS,:quantity => rows }
-							).show_content) if rows < BitmapCmdEditor::MIN_ROWS
+						ValidatorHelper.more_than_max('columns',BitmapCmdEditor::MAX_COLUMNS,columns)
+
+						ValidatorHelper.more_than_max('rows',BitmapCmdEditor::MAX_ROWS,rows)
+
+						ValidatorHelper.less_than_min('columns',BitmapCmdEditor::MIN_COLUMNS,columns)
+
+						ValidatorHelper.less_than_min('rows',BitmapCmdEditor::MIN_ROWS,rows)
+
 						:valid
 					rescue  => err
 						err.message

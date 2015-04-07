@@ -3,7 +3,7 @@ module BitmapCmdEditor
 	# It's the main object is instantiated empty when the application start
 	class Bitmap
 
-		attr_reader :table
+		attr_reader :table, :columns, :rows
 
 		# @param (see CommandValidator#initialize)
 		def initialize
@@ -63,7 +63,7 @@ module BitmapCmdEditor
 			# @param input [String] in this case the command is for example L 4 2 A
 			# @return ColourPixelValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def colours_pixel(args)
-				validator=Validators::ColourPixelValidator.validate(args)
+				validator=Validators::ColourPixelValidator.validate(args, @columns, @rows)
 				if validator == :valid
 					column=Integer(args[1]) - 1
 					row = Integer(args[2]) - 1

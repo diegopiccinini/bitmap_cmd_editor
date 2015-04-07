@@ -23,8 +23,8 @@ Feature: Colours a Pixel
 		| "I 5 6"		| "L -1 2 A"	| "a valid columns values are between 1 and 5, and you try -1"	|
 		| "I 6 3"		| "L 3 9 A"		| "a valid rows values are between 1 and 3, and you try 9"			|
 		| "I 5 4"		| "L 3 0 A"		| "a valid rows values are between 1 and 4, and you try 0"			|
-		| "I 5 4"		| "L 3 4 A C"	| "more arguments than allowed, this command has only 3"				|
-		| "I 5 4"		| "L 3 4"			| "Less arguments than allowed, this command has 3"							|
+		| "I 5 4"		| "L 3 4 A C"	| "this command require 3 arguments"														|
+		| "I 5 4"		| "L 3 4"			| "this command require 3 arguments"														|
 		| "I 5 4"		| "L S 4 A"		| "the coordinates M N must be integers"												|
 		| "I 5 4"		| "L 4 H A"		| "the coordinates M N must be integers"												|
-		| "I 5 4"		| "L 4 3 5H"	| "the second argument must be a Capital Letter A-Z"						|
+		| "I 5 4"		| "L 4 3 5H"	| "the colour must be a Capital Letter A-Z"											|
