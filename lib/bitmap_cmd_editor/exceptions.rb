@@ -12,4 +12,6 @@ module BitmapCmdEditor
   class HorizontalLineArgumentError < ArgumentError; end
   class VerticalLineArgumentError < ArgumentError; end
   class FillRegionArgumentError < ArgumentError; end
+  class PrintTableArgumentError < ArgumentError; end
+
 end

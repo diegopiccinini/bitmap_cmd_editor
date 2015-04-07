@@ -10,6 +10,7 @@ module BitmapCmdEditor
 				:less_than_min => "the minimun %{obj} allowed is %{min} and you want %{quantity}",
 				:command_wrong_arguments => "this command require %{arguments} arguments",
 				:clear_image_wrongs_arguments => "clear image hasn't arguments",
+				:print_table_arguments => "print table hasn't arguments",
 				:colours_pixel_out_of_range => "a valid %{obj} values are between %{min} and %{max}, and you try %{quantity}",
 				:coordinates_are_not_integer => "the coordinates M N must be integers",
 				:out_of_range => "a valid %{obj} values are between %{min} and %{max}, and you try %{quantity}",
@@ -18,7 +19,7 @@ module BitmapCmdEditor
 			# initialize the message
 			# @param content [String] text message to the user
 			# @param error_type [Symbol] to qualifies the error
-			# @param args [Hash] to include params in the response for example {:min => 1 , :max => 10}
+			# @param args [Hash] to include params in the response
 			def initialize(error_type = :invalid,  args = {}, content = nil)
 				unless content
 					@content=MESSAGES[error_type]

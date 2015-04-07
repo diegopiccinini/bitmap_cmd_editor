@@ -10,8 +10,8 @@ Feature: Show Content
 		And I type "L 3 3 E"
 		And I type "L 2 5 E"
 		And I type "F 4 2 H"
-		And I type "X"
 		When I type "S"
+		And I type "X"
 		Then it should pass with:
 				"""
 				Welcome to the Bitmap Command Editor

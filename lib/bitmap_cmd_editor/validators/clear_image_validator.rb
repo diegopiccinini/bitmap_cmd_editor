@@ -4,7 +4,7 @@ module BitmapCmdEditor
 		# To validate a new bitmap image table created
 		class ClearImageValidator
 			class << self
-				# @param args [Array] the command 0=> 'I' and 1=> columns 2 =>rows
+				# @param args [Array] the command 0=> 'C'
 				def validate(args)
 					begin
 						raise ClearImageArgumentError.new(

@@ -34,6 +34,8 @@ module BitmapCmdEditor
 					draw_horizontal_line(args)
 				when 'F'
 					fill_region(args)
+				when 'S'
+					print_table(args)
 				end
 			else
 				validator
@@ -42,7 +44,7 @@ module BitmapCmdEditor
     private
 
 			# For create image table map for M columns and N rows with the command I M N
-			# @param input [String] the command typed for example: I 5 6
+			# @param args [String] the command typed for example: I 5 6
 			# @return CreateImageValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def create_image(args)
 				validator=Validators::CreateImageValidator.validate(args)
@@ -55,7 +57,7 @@ module BitmapCmdEditor
 			end
 
 			# clear the image with the command C all values will be O
-			# @param input [String] in this case is C
+			# @param args [String] in this case is C
 			# @return CreateImageValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def clear_image(args)
 				validator=Validators::ClearImageValidator.validate(args)
@@ -66,7 +68,7 @@ module BitmapCmdEditor
 			end
 
 			# to fill a coordinate with specific colour with command L M N C
-			# @param input [String] in this case the command is for example L 4 2 A
+			# @param args [String] in this case the command is for example L 4 2 A
 			# @return ColourPixelValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def colours_pixel(args)
 				validator=Validators::ColourPixelValidator.validate(args, @columns, @rows)
@@ -79,7 +81,10 @@ module BitmapCmdEditor
 			end
 
 			# to create a fill all  table coordinates with a colour
-			# @return table [Array]
+			# @param columns [Integer]
+			# @param rows [Integer]
+			# @param colour [String]
+			# @return table 2 dimensions [Array] pixels coordinates rows and coloumns with colour
 			def fill_table(columns, rows, colour = 'O')
 				table = []
 				rows.times do |row|
@@ -89,7 +94,7 @@ module BitmapCmdEditor
 			end
 
 			# to draw a vertical line
-			# @param input [String] in this case the command is for example V 2 1 4 W
+			# @param args [String] in this case the command is for example V 2 1 4 W
 			# @return VerticalLineValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def draw_vertical_line(args)
 				validator=Validators::VerticalLineValidator.validate(args, @columns, @rows)
@@ -105,7 +110,7 @@ module BitmapCmdEditor
 			end
 
 			# to draw a horinzontal line
-			# @param input [String] in this case the command is for example H 2 1 4 C
+			# @param args [String] in this case the command is for example H 2 1 4 C
 			# @return VerticalLineValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def draw_horizontal_line(args)
 				validator=Validators::HorizontalLineValidator.validate(args, @columns, @rows)
@@ -121,7 +126,7 @@ module BitmapCmdEditor
 			end
 
 			# to fill a region with specific colour with command F M N C
-			# @param input [String] in this case the command is for example F 4 2 A
+			# @param args [String] in this case the command is for example F 4 2 A
 			# @return FillRegionValidator.validate response [Symbol|String] could be :valid or Error Message string
 			def fill_region(args)
 				validator=Validators::FillRegionValidator.validate(args, @columns, @rows)
@@ -143,7 +148,9 @@ module BitmapCmdEditor
 				validator
 			end
 
-
+			# search the same colour adjacent pixels
+			# @param same_region [Array] the region has finded
+			# @param searched [Array] the pixels that it has a previous search
 			def get_region(same_region, searched)
 
 				diff = same_region - searched
@@ -166,6 +173,21 @@ module BitmapCmdEditor
 					searched.push find_center
 				end
 				[same_region , searched]
+			end
+
+
+			# print the table with the command S
+			# @param args [String] in this case is S
+			# @return PrintTableValidator.validate response [Symbol|String] could be :valid or Error Message string
+			def print_table(args)
+				validator=Validators::PrintTableValidator.validate(args)
+				if validator == :valid
+					puts "\n"
+					@table.each do |row|
+						puts row.join(' ')
+					end
+				end
+				validator
 			end
 	end
 end
