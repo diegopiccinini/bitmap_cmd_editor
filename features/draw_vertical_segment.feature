@@ -18,11 +18,13 @@ Feature:  Draw a vertical segment
 		Then He should see the message <Message>
 
 		Examples:
-		|Command I| Command L	| Message																														|
+		|Command I	| Command L			| Message																												|
 		| "I 5 6"		| "V 7 2 4 A"		| "a valid columns values are between 1 and 5, and you try 7"		|
 		| "I 5 6"		| "V -1 2 4 A"	| "a valid columns values are between 1 and 5, and you try -1"	|
 		| "I 6 3"		| "V 3 9 3 A"		| "a valid rows values are between 1 and 3, and you try 9"			|
 		| "I 5 4"		| "V 3 0 4 A"		| "a valid rows values are between 1 and 4, and you try 0"			|
+		| "I 6 3"		| "V 3 3 9 A"		| "a valid rows values are between 1 and 3, and you try 9"			|
+		| "I 5 4"		| "V 3 1 -2 A"	| "a valid rows values are between 1 and 4, and you try -2"			|
 		| "I 5 4"		| "V 3 4 A C R"	| "this command require 4 arguments"														|
 		| "I 5 4"		| "V 3 4"				| "this command require 4 arguments"														|
 		| "I 5 4"		| "V S 4 5 A"		| "the coordinates M N must be integers"												|
