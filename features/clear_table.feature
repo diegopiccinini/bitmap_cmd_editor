@@ -1,4 +1,6 @@
 Feature: Clear table
+	the command C - Clears the table, setting all pixels to white (O)
+
 	Scenario: Cleaning the table
     Given a bitmap created
 		And The user type "I 5 6"

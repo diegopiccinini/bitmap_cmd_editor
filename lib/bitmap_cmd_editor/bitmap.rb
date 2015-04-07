@@ -54,7 +54,7 @@ module BitmapCmdEditor
 			def clear_image(args)
 				validator=Validators::ClearImageValidator.validate(args)
 				if validator == :valid
-					@table = Array.new(@rows,Array.new(@columns,'O')) if (@rows * @columns) > 0
+					@table = fill_table(@columns,@rows)
 				end
 				validator
 			end

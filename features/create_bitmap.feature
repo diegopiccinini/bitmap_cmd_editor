@@ -1,4 +1,6 @@
 Feature: Create a Bitmap
+	the command I M N - Create a new M x N image with all pixels coloured white (O).
+
   Scenario: Create a new M x N image
     Given a bitmap created
 		When The user type "I 5 6"
