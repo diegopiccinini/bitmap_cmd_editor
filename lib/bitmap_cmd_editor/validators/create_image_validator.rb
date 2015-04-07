@@ -8,12 +8,12 @@ module BitmapCmdEditor
 				def validate(args)
 					begin
 						raise CreateImageArgumentError.new(
-							ErrorMessage.new(:create_image_wrong_arguments).show_content) unless args.count == 3
+							ErrorMessage.new(:command_wrong_arguments, {:arguments => 2}).show_content) unless args.count == 3
 						begin
 							columns= Integer(args[1])
 							rows= Integer(args[2])
 						rescue => err
-							raise TypeError.new("the arguments M N should be integers")
+							raise TypeError.new(ErrorMessage.new(:coordinates_are_not_integer).show_content)
 						end
 						raise MoreColumnsThanAllowed.new(ErrorMessage.new(
 							:more_than_max,

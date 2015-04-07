@@ -8,8 +8,10 @@ module BitmapCmdEditor
 				:command_not_exist => "This command is not available, please check the available commands",
 				:more_than_max => "the maximun %{obj} allowed are %{max} and you want %{quantity}",
 				:less_than_min => "the minimun %{obj} allowed is %{max} and you want %{quantity}",
-				:create_image_wrong_arguments => "the command I require 2 arguments",
-				:clear_image_wrongs_arguments => "clear image hasn't arguments"
+				:command_wrong_arguments => "the command I require %{arguments} arguments",
+				:clear_image_wrongs_arguments => "clear image hasn't arguments",
+				:colours_pixel_out_of_range => "a valid %{obj} values are between %{min} and %{max}, and you try %{quantity}",
+				:coordinates_are_not_integer => "the coordinates M N must be integers"
 			}
 			# initialize the message
 			# @param content [String] text message to the user
