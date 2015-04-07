@@ -18,7 +18,7 @@ Feature:  Draw a horizontal segment
 		Then He should see the message <Message>
 
 		Examples:
-		|Command I| Command L	| Message																															|
+		|Command I 	| Command L			| Message																												|
 		| "I 5 6"		| "H 2 7 4 A"		| "a valid columns values are between 1 and 5, and you try 7"		|
 		| "I 5 6"		| "H 2 11 4 A"	| "a valid columns values are between 1 and 5, and you try 11"	|
 		| "I 5 6"		| "H -1 2 4 A"	| "a valid columns values are between 1 and 5, and you try -1"	|

@@ -30,6 +30,8 @@ module BitmapCmdEditor
 					colours_pixel(args)
 				when 'V'
 					draw_vertical_line(args)
+				when 'H'
+					draw_horizontal_line(args)
 				end
 			else
 				validator
@@ -94,6 +96,22 @@ module BitmapCmdEditor
 					row_start = Integer(args[2]) - 1
 					row_end = Integer(args[3]) - 1
 					(row_start..row_end).each do |row|
+						@table[row][column]=args[4]
+					end
+				end
+				validator
+			end
+
+			# to draw a horinzontal line
+			# @param input [String] in this case the command is for example H 2 1 4 C
+			# @return VerticalLineValidator.validate response [Symbol|String] could be :valid or Error Message string
+			def draw_horizontal_line(args)
+				validator=Validators::HorizontalLineValidator.validate(args, @columns, @rows)
+				if validator == :valid
+					column_start=Integer(args[1]) - 1
+					column_end = Integer(args[2]) - 1
+					row = Integer(args[3]) - 1
+					(column_start..column_end).each do |column|
 						@table[row][column]=args[4]
 					end
 				end
