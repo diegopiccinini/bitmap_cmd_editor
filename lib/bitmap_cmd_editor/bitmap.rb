@@ -32,6 +32,8 @@ module BitmapCmdEditor
 					draw_vertical_line(args)
 				when 'H'
 					draw_horizontal_line(args)
+				when 'F'
+					fill_region(args)
 				end
 			else
 				validator
@@ -116,6 +118,54 @@ module BitmapCmdEditor
 					end
 				end
 				validator
+			end
+
+			# to fill a region with specific colour with command F M N C
+			# @param input [String] in this case the command is for example F 4 2 A
+			# @return FillRegionValidator.validate response [Symbol|String] could be :valid or Error Message string
+			def fill_region(args)
+				validator=Validators::FillRegionValidator.validate(args, @columns, @rows)
+				if validator == :valid
+					column=Integer(args[1]) - 1
+					row = Integer(args[2]) - 1
+					searched = []
+					same_region = [[row , column]]
+					begin
+						same_region, searched = get_region(same_region,searched)
+					end while not (same_region - searched).empty?
+
+					same_region.each do |fill_coordinate|
+						r=fill_coordinate[0]
+						c=fill_coordinate[1]
+						@table[r][c]=args[3]
+					end
+				end
+				validator
+			end
+
+
+			def get_region(same_region, searched)
+
+				diff = same_region - searched
+				# search only the points not searched before
+				diff.each do |find_center|
+					row= find_center[0]
+					column = find_center[1]
+					if row> (BitmapCmdEditor::MIN_ROWS - 1)
+						same_region.push [row - 1 , column]  if @table[row - 1][column] == @table[row][column]
+					end
+					if row< (@rows -1)
+						same_region.push [row + 1 , column]  if @table[row + 1][column] == @table[row][column]
+					end
+					if column> (BitmapCmdEditor::MIN_COLUMNS - 1 )
+						same_region.push [row  , column - 1]  if @table[row][column - 1] == @table[row][column]
+					end
+					if column< (@columns - 1)
+						same_region.push [row , column + 1]  if @table[row][column  + 1] == @table[row][column]
+					end
+					searched.push find_center
+				end
+				[same_region , searched]
 			end
 	end
 end

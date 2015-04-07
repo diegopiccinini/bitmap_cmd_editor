@@ -3,8 +3,8 @@ Dir[File.join(File.dirname(__FILE__),'validators','*.rb')].each {|file| require 
 
 module BitmapCmdEditor
   VERSION = "0.0.2"
-  COMMANDS = ['X','I','C','L','V','H']
-  #TODO implement ,'F','S'
+  COMMANDS = ['X','I','C','L','V','H','F']
+  #TODO implement ,'S'
   MAX_COLUMNS = 250
   MIN_COLUMNS = 1
   MAX_ROWS = 250

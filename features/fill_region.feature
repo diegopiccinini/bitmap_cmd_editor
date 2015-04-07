@@ -9,13 +9,21 @@ Any other pixel which is the same colour as (X,Y) and shares a common side with 
 		And The user type "L 3 2 E"
 		And The user type "L 4 2 E"
 		And The user type "L 3 3 E"
+		And The user type "L 2 5 E"
+		And the bitmap should be
+			|O|O|O|E|O|
+			|O|O|E|E|O|
+			|O|O|E|O|O|
+			|O|O|O|O|O|
+			|O|E|O|O|O|
+			|O|O|O|O|O|
 		When The user type "F 4 2 H"
 		Then the bitmap should be
 			|O|O|O|H|O|
 			|O|O|H|H|O|
-			|O|O|O|H|O|
+			|O|O|H|O|O|
 			|O|O|O|O|O|
-			|O|O|O|O|O|
+			|O|E|O|O|O|
 			|O|O|O|O|O|
 
   Scenario Outline: Trying to filling a Bitmap with invalid commands

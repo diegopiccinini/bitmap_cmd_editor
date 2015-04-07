@@ -9,4 +9,7 @@ module BitmapCmdEditor
   class OutOfRange < RangeError; end
   class ClearImageArgumentError < ArgumentError; end
   class ColourPixelArgumentError < ArgumentError; end
+  class HorizontalLineArgumentError < ArgumentError; end
+  class VerticalLineArgumentError < ArgumentError; end
+  class FillRegionArgumentError < ArgumentError; end
 end

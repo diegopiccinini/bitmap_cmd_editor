@@ -8,7 +8,7 @@ module BitmapCmdEditor
 				# @param bitmap_rows [Integer] number of rows of the image created
 				def validate(args, bitmap_columns, bitmap_rows)
 					begin
-						raise ColourPixelArgumentError.new(
+						raise HorizontalLineArgumentError.new(
 							ErrorMessage.new(:command_wrong_arguments, {:arguments => 4}).show_content) unless args.count == 5
 
 						begin
