@@ -28,6 +28,8 @@ module BitmapCmdEditor
 					clear_image(args)
 				when 'L'
 					colours_pixel(args)
+				when 'V'
+					draw_vertical_line(args)
 				end
 			else
 				validator
@@ -80,6 +82,18 @@ module BitmapCmdEditor
 					table[row] =Array.new(columns,colour)
 				end
 				table
+			end
+			def draw_vertical_line(args)
+				validator=Validators::VerticalLineValidator.validate(args, @columns, @rows)
+				if validator == :valid
+					column=Integer(args[1]) - 1
+					row_start = Integer(args[2]) - 1
+					row_end = Integer(args[3]) - 1
+					(row_start..row_end).each do |row|
+						@table[row][column]=args[4]
+					end
+				end
+				validator
 			end
 	end
 end
