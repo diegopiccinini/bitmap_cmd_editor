@@ -6,6 +6,7 @@ require 'bitmap_cmd_editor/version'
 Gem::Specification.new do |spec|
   spec.name          = "bitmap_cmd_editor"
   spec.version       = BitmapCmdEditor::VERSION
+  spec.platform      = Gem::Platform::RUBY
   spec.authors       = ["Diego Hernán Piccinini Lagos"]
   spec.email         = ["diego@guiasrails.es"]
   spec.summary       = %q{Produce a Ruby 2.0 program that simulates a basic interactive bitmap editor. Bitmaps are represented as an M x N matrix of pixels with each element representing a colour.}
@@ -19,8 +20,14 @@ Pixel co-ordinates are a pair of integers: a column number between 1 and 250, an
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
-
+  spec.required_ruby_version = ">= 2.0.0"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "shoulda-matchers", '~> 2.8.0'
+  spec.add_development_dependency "rspec-expectations", '~> 3.2.0'
+  spec.add_development_dependency "cucumber", '~> 2.0.0'
+  spec.add_development_dependency "aruba"
+  spec.add_development_dependency "yard"
+
   spec.has_rdoc = 'yard'
 end

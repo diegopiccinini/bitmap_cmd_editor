@@ -172,6 +172,8 @@ module BitmapCmdEditor
 					end
 					searched.push find_center
 				end
+				same_region = same_region.uniq
+				searched = searched.uniq
 				[same_region , searched]
 			end
 
