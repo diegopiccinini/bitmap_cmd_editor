@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: BitmapCmdEditor::Validators::ErrorMessage
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!BitmapCmdEditor/Validators/ErrorMessage.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (E)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BitmapCmdEditor.html" title="BitmapCmdEditor (module)">BitmapCmdEditor</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Validators.html" title="BitmapCmdEditor::Validators (module)">Validators</a></span></span>
+     &raquo; 
+    <span class="title">ErrorMessage</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: BitmapCmdEditor::Validators::ErrorMessage
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">BitmapCmdEditor::Validators::ErrorMessage</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/bitmap_cmd_editor/validators/error_message.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>An intance contains te error_type and a message to the user</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Diego Hernán Piccinini Lagos</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="MESSAGES-constant" class="">MESSAGES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='symbol'>:invalid</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This operation is invalid</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:command_not_exist</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This command is not available, please check the available commands</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:more_than_max</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the maximun %{obj} allowed are %{max} and you want %{quantity}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:less_than_min</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the minimun %{obj} allowed is %{min} and you want %{quantity}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:command_wrong_arguments</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>this command require %{arguments} arguments</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:clear_image_wrongs_arguments</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>clear image hasn&#39;t arguments</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:print_table_arguments</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>print table hasn&#39;t arguments</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:colours_pixel_out_of_range</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a valid %{obj} values are between %{min} and %{max}, and you try %{quantity}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:coordinates_are_not_integer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the coordinates M N must be integers</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:out_of_range</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a valid %{obj} values are between %{min} and %{max}, and you try %{quantity}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='symbol'>:the_colour_is_invalid</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the colour must be a Capital Letter A-Z</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ErrorMessage) <strong>initialize</strong>(error_type = :invalid, args = {}, content = nil) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>initialize the message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_content-instance_method" title="#show_content (instance method)">- (Object) <strong>show_content</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Text message [String] it could contain arguments.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="BitmapCmdEditor::Validators::ErrorMessage (class)">ErrorMessage</a></span></tt>) <strong>initialize</strong>(error_type = :invalid, args = {}, content = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>initialize the message</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>text message to the user</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>error_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:invalid</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>to qualifies the error</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>to include params in the response</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bitmap_cmd_editor/validators/error_message.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_error_type'>error_type</span> <span class='op'>=</span> <span class='symbol'>:invalid</span><span class='comma'>,</span>  <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+	<span class='kw'>unless</span> <span class='id identifier rubyid_content'>content</span>
+		<span class='ivar'>@content</span><span class='op'>=</span><span class='const'>MESSAGES</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span>
+	<span class='kw'>else</span>
+		<span class='ivar'>@content</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span>
+	<span class='kw'>end</span>
+	<span class='ivar'>@error_type</span> <span class='op'>=</span> <span class='id identifier rubyid_error_type'>error_type</span>
+	<span class='ivar'>@args</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="show_content-instance_method">
+  
+    - (<tt>Object</tt>) <strong>show_content</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns text message [String] it could contain arguments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>text message [String] it could contain arguments</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bitmap_cmd_editor/validators/error_message.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show_content'>show_content</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@content</span> <span class='op'>%</span> <span class='ivar'>@args</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Apr  8 07:45:15 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

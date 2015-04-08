@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: BitmapCmdEditor
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!BitmapCmdEditor.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (B)</a> &raquo;
+    
+    
+    <span class="title">BitmapCmdEditor</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: BitmapCmdEditor
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/bitmap_cmd_editor/bitmap.rb<span class="defines">,<br />
+  lib/bitmap_cmd_editor/client.rb,<br /> lib/bitmap_cmd_editor/version.rb,<br /> lib/bitmap_cmd_editor/exceptions.rb,<br /> lib/bitmap_cmd_editor/validators/error_message.rb,<br /> lib/bitmap_cmd_editor/validators/command_validator.rb,<br /> lib/bitmap_cmd_editor/validators/validator_herlper.rb,<br /> lib/bitmap_cmd_editor/validators/fill_region_validator.rb,<br /> lib/bitmap_cmd_editor/validators/print_table_validator.rb,<br /> lib/bitmap_cmd_editor/validators/clear_image_validator.rb,<br /> lib/bitmap_cmd_editor/validators/create_image_validator.rb,<br /> lib/bitmap_cmd_editor/validators/colour_pixel_validator.rb,<br /> lib/bitmap_cmd_editor/validators/vertical_line_validator.rb,<br /> lib/bitmap_cmd_editor/validators/horizontal_line_validator.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="BitmapCmdEditor/Validators.html" title="BitmapCmdEditor::Validators (module)">Validators</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="BitmapCmdEditor/Bitmap.html" title="BitmapCmdEditor::Bitmap (class)">Bitmap</a></span>, <span class='object_link'><a href="BitmapCmdEditor/ClearImageArgumentError.html" title="BitmapCmdEditor::ClearImageArgumentError (class)">ClearImageArgumentError</a></span>, <span class='object_link'><a href="BitmapCmdEditor/Client.html" title="BitmapCmdEditor::Client (class)">Client</a></span>, <span class='object_link'><a href="BitmapCmdEditor/ColourPixelArgumentError.html" title="BitmapCmdEditor::ColourPixelArgumentError (class)">ColourPixelArgumentError</a></span>, <span class='object_link'><a href="BitmapCmdEditor/CreateImageArgumentError.html" title="BitmapCmdEditor::CreateImageArgumentError (class)">CreateImageArgumentError</a></span>, <span class='object_link'><a href="BitmapCmdEditor/FillRegionArgumentError.html" title="BitmapCmdEditor::FillRegionArgumentError (class)">FillRegionArgumentError</a></span>, <span class='object_link'><a href="BitmapCmdEditor/HorizontalLineArgumentError.html" title="BitmapCmdEditor::HorizontalLineArgumentError (class)">HorizontalLineArgumentError</a></span>, <span class='object_link'><a href="BitmapCmdEditor/LessColumnsThanAllowed.html" title="BitmapCmdEditor::LessColumnsThanAllowed (class)">LessColumnsThanAllowed</a></span>, <span class='object_link'><a href="BitmapCmdEditor/LessRowsThanAllowed.html" title="BitmapCmdEditor::LessRowsThanAllowed (class)">LessRowsThanAllowed</a></span>, <span class='object_link'><a href="BitmapCmdEditor/MoreColumnsThanAllowed.html" title="BitmapCmdEditor::MoreColumnsThanAllowed (class)">MoreColumnsThanAllowed</a></span>, <span class='object_link'><a href="BitmapCmdEditor/MoreRowsThanAllowed.html" title="BitmapCmdEditor::MoreRowsThanAllowed (class)">MoreRowsThanAllowed</a></span>, <span class='object_link'><a href="BitmapCmdEditor/NotImplementedCommand.html" title="BitmapCmdEditor::NotImplementedCommand (class)">NotImplementedCommand</a></span>, <span class='object_link'><a href="BitmapCmdEditor/OutOfRange.html" title="BitmapCmdEditor::OutOfRange (class)">OutOfRange</a></span>, <span class='object_link'><a href="BitmapCmdEditor/PrintTableArgumentError.html" title="BitmapCmdEditor::PrintTableArgumentError (class)">PrintTableArgumentError</a></span>, <span class='object_link'><a href="BitmapCmdEditor/VerticalLineArgumentError.html" title="BitmapCmdEditor::VerticalLineArgumentError (class)">VerticalLineArgumentError</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="VERSION-constant" class="">VERSION =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.0.2</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="COMMANDS-constant" class="">COMMANDS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>I</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>V</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>F</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>S</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></pre></dd>
+      
+        <dt id="MAX_COLUMNS-constant" class="">MAX_COLUMNS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>250</span></pre></dd>
+      
+        <dt id="MIN_COLUMNS-constant" class="">MIN_COLUMNS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1</span></pre></dd>
+      
+        <dt id="MAX_ROWS-constant" class="">MAX_ROWS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>250</span></pre></dd>
+      
+        <dt id="MIN_ROWS-constant" class="">MIN_ROWS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1</span></pre></dd>
+      
+        <dt id="WELCOME_MESSAGE-constant" class="">WELCOME_MESSAGE =
+          
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;-EOF</span>
+<span class='tstring_content'>Welcome to the Bitmap Command Editor
+------------------------------------
+
+Available Commands:
+-------------------
+
+	I M N - Create a new M x N image with all pixels coloured white (O).
+	C - Clears the table, setting all pixels to white (O).
+	L X Y C - Colours the pixel (X,Y) with colour C.
+	V X Y1 Y2 C - Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive).
+	H X1 X2 Y C - Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).
+	F X Y C - Fill the region R with the colour C. R is defined as: Pixel (X,Y) belongs to R. Any other pixel which is the same colour as (X,Y) and shares a common side with any pixel in R also belongs to this region.
+	S - Show the contents of the current image
+	X - Terminate the session
+</span><span class='heredoc_end'>EOF</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Apr  8 07:45:15 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>
