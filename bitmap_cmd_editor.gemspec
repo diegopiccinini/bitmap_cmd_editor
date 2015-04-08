@@ -23,9 +23,9 @@ Pixel co-ordinates are a pair of integers: a column number between 1 and 250, an
   spec.required_ruby_version = ">= 2.0.0"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "shoulda-matchers", '~> 2.8.0'
-  spec.add_development_dependency "rspec-expectations", '~> 3.2.0'
-  spec.add_development_dependency "cucumber", '~> 2.0.0'
+  spec.add_development_dependency "shoulda-matchers", '2.8.0'
+  spec.add_development_dependency "rspec-expectations", '3.2.0'
+  spec.add_development_dependency "cucumber", '2.0.0'
   spec.add_development_dependency "aruba"
   spec.add_development_dependency "yard"
 
