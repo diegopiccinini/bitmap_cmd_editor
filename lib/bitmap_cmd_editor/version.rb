@@ -2,7 +2,7 @@ Dir[File.join(File.dirname(__FILE__),'*.rb')].each {|file| require file }
 Dir[File.join(File.dirname(__FILE__),'validators','*.rb')].each {|file| require file }
 
 module BitmapCmdEditor
-  VERSION = "1.0.2"
+  VERSION = "1.0.4"
   COMMANDS = ['X','I','C','L','V','H','F','S']
   MAX_COLUMNS = 250
   MIN_COLUMNS = 1

@@ -28,6 +28,5 @@ Pixel co-ordinates are a pair of integers: a column number between 1 and 250, an
   spec.add_development_dependency "cucumber", '2.0.0'
   spec.add_development_dependency "aruba"
   spec.add_development_dependency "yard"
-
   spec.has_rdoc = 'yard'
 end

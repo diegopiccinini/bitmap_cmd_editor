@@ -4,6 +4,9 @@ This is an interactive command script, input consists of a string containing a s
 
 Pixel co-ordinates are a pair of integers: a column number between 1 and 250, and a row number between 1 and 250. Bitmaps starts at coordinates 1,1. Colours are specified by capital letters.
 
+# Ruby version
+		2.0+
+
 ## Installation
 
 Add this line to your application's Gemfile:
