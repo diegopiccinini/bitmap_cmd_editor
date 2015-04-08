@@ -24,7 +24,7 @@ require 'rubygems/tasks'
 Gem::Tasks.new
 
 YARD::Rake::YardocTask.new do |t|
-  t.files   = ['lib/**/*.rb', OTHER_PATHS]   # optional
+  t.files   = ['app/**/*.rb', 'lib/**/*.rb', '-', 'doc/FAQ.md', 'doc/Changes.md']
   t.options = ['--any', '--extra', '--opts'] # optional
 end
 
